@@ -1,12 +1,27 @@
-# React + Vite
+# Blog using React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Single page Blog application using React + Vite.
 
-Currently, two official plugins are available:
+- Utilizes **React Router** to simulate a multi-page application.
+- Utilizes **Axios** to fetch data from development API using **JSON server**.
+- Utilizes CSS Flexbox to design application
+  
+## Functionalities
+- Crud operations to create, read, update and delete posts from backend server.
+- Responsive application that adapts to user screen (Mobile, Table, and Laptop/Desktop)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup 
+1. Update Backend Host URL:
+- Navigate to root/api/posts.js
+- change the baseURL to your application's backend url that you setup as the host
 
-## Expanding the ESLint configuration
+2. Initiate back-end server
+- navigate to the "root folder" in your terminal
+- launch json server instance with "npx json-server -p 3500 -w data/db.json"
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Initiate front-end server
+- navigate to the root folder in your terminal
+- launch react server instance with "npm run dev"
+
+## Resources
+- https://www.youtube.com/watch?v=RVFAyFWO4go&t=28719s
