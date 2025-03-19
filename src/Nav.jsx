@@ -1,9 +1,26 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import DataContext from "./context/DataContext";
+import { useEffect } from "react";
+import { useStoreState, useStoreActions } from "easy-peasy";
 
 const Nav = () => {
-  const { search, setSearch } = useContext(DataContext);
+  // import state from easy peasy
+  const posts = useStoreState((state) => state.posts);
+  const search = useStoreState((state) => state.search);
+
+  // import actions from easy peasy
+  const setSearch = useStoreActions((actions) => actions.setSearch);
+  const setSearchResults = useStoreActions((actions) => actions.setSearchResults);
+
+  // Search & Filter Posts Function
+  useEffect(() => {
+    const filteredResults = posts.filter(
+      (post) =>
+        post.body.toLowerCase().includes(search.toLowerCase()) ||
+        post.title.toLowerCase().includes(search.toLowerCase())
+    );
+
+    setSearchResults(filteredResults.reverse()); // shows the newest at the top
+  }, [posts, search, setSearchResults]);
 
   return (
     <nav className="Nav">
@@ -26,7 +43,7 @@ const Nav = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/post">Post</Link>
+          <Link to="/new-post">Post</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
