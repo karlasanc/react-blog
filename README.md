@@ -1,16 +1,14 @@
 # Blog using React + Vite
 
-This is a Single Page Blog Application built using React and Vite. It simulates a full-stack blog experience by
-utilizing JSON Server for backend REST API during development, React Router for page navigation, and Easy Peasy for
-state management with Redux.
+This is a **Single Page Blog Application** built using **React** and **Vite**. It simulates a full-stack blog experience by utilizing **JSON Server** for backend REST API during development, **React Router** for page navigation, and **Easy Peasy** for state management with Redux.
 
 ## Key Features
 
-- CRUD Operations: Create, Read, Update, and Delete posts from the backend server.
-- Routing: Navigate between different pages using React Router.
-- State Management: Manage application state with Easy Peasy (a Redux alternative).
-- Responsive Design: Adapts to various screen sizes (Mobile, Tablet, Laptop/Desktop).
-- Styled with Flexbox: Uses CSS Flexbox for layout design.
+- **CRUD Operations**: Create, Read, Update, and Delete blog posts.
+- **Routing**: Navigate between pages using React Router.
+- **State Management**: Manage global state efficiently with Easy Peasy.
+- **Responsive Design**: Mobile-first design, adapting seamlessly across devices.
+- **Flexbox Layout**: Styled using CSS Flexbox for a modern UI.
 
 ## Tech Stack
 
@@ -20,42 +18,48 @@ state management with Redux.
 - **Easy Peasy**: State management library using Redux under the hood.
 - **JSON Server**: Fake REST API for development.
 - **React Router**: For page navigation.
+- **Date-fns**: Library for date formatting.
 
-## Functionalities
-
-- Create, Read, Update, Delete (CRUD): Full CRUD functionality for posts.
-- Responsive UI: Mobile-first design that adjusts seamlessly across different devices.
+## Installation & Setup
 
 ## Setup Instructions
 
-1. Install Dependencies In your terminal, navigate to the root of your project folder and run: `npm install` This will
-   install all necessary dependencies.
-2. Update Backend Host URL Navigate to src/api/posts.js. Change the baseURL to the backend URL you have set up (if
-   different from the default).
-3. Start JSON Server
-4. Start React Development Server In your terminal, navigate to the root of your project folder and run: `npm install`
-   This will install all necessary dependencies.
+Follow these steps to set up the project on your local machine:
 
-5. Update Backend Host URL:
+### 1. Install Dependecies
 
-- Navigate to root/api/posts.js
-- change the baseURL to your application's backend url that you setup as the host
+```sh
+npm install
+```
 
-1. Initiate JSON server
+### 2. Update Backend Host URL
 
-- navigate to the "root folder" in your terminal
-- launch json server instance with "npx json-server -p 3500 -w data/db.json"
+* Navigate to `src/api/posts.js`.
+* Update the `baseURL` to match your backend server's URL (if different from the default).
 
-4. Initiate React server
+### 3. Start JSON Server (Mock API)
 
-- navigate to the root folder in your terminal
-- launch react server instance with "npm run dev"
+* Open a terminal and navigate to the project root.
+* Run the following command to start the **JSON server**:
+
+```sh
+npx json-server -p 3500 -w data/db.json
+```
+
+### 4. Start the React Development Server
+
+* Open a terminal and navigate to the project root.
+* Start the **React App** with:
+
+```sh
+npm run dev
+```
 
 ## Resources
 
-- Axios: https://www.npmjs.com/package/axios
-- Easy Peasy: https://www.npmjs.com/package/easy-peasy
-- React Router Dom : https://www.npmjs.com/package/react-router-dom
-- Date-fns: https://www.npmjs.com/package/date-fns
-- Vite: https://vite.dev/guide/
-- https://www.youtube.com/watch?v=RVFAyFWO4go&t=28719s
+- [Axios](https://www.npmjs.com/package/axios): Promise-based HTTP client.
+- [Easy Peasy](https://www.npmjs.com/package/easy-peasy): Simple state management.
+- [React Router Dom](https://www.npmjs.com/package/react-router-dom): Client-side routing.
+- [Date-fns](https://www.npmjs.com/package/date-fns): Date utility library.
+- [Vite](https://vite.dev/guide/)
+- [Youtube Tutorial](https://www.youtube.com/watch?v=RVFAyFWO4go&t=28719s)
